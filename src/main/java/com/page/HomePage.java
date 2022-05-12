@@ -75,7 +75,7 @@ public class HomePage extends TestBase {
 	WebElement MenueButton;
 	
 	
-	////*[@id="pageBodyContainer"]
+	
 	//page factory initialization
 
 	public HomePage() throws IOException {
