@@ -41,12 +41,12 @@ public class TestUtil extends TestBase{
 	try {
 		file  = new FileInputStream(path);
 	} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}try {
 		book = WorkbookFactory.create(file);
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 	sheet = book.getSheet(sheetName);
@@ -65,8 +65,10 @@ public class TestUtil extends TestBase{
 
 	
 	public static void takeScreenshoot() throws IOException{
+		
 		// Convert webdriver to TakeScreenshot
 		File screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		
 		// Copy the file to a location and use try catch block to handle exception
 		Files.copy(screenShot, new File("/Users/jamila/eclipse-workspace/Target_Automation_Final/Screenshot/photo"+System.currentTimeMillis()+".jpeg"));
 	}
